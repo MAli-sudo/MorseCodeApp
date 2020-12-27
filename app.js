@@ -19,8 +19,6 @@ async = require('async');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var classes = require('./routes/classes');
-var students = require('./routes/students');
-var instructors = require('./routes/instructors');
 
 var app = express();
 
@@ -70,22 +68,9 @@ app.use(expressValidator({
 // Connect-Flash
 app.use(flash());
 
-// Makes the user object global in all views
-app.get('*', function(req, res, next) {
-  // put user into res.locals for easy access from templates
-  res.locals.user = req.user || null;
-  if(req.user){
-    res.locals.type = req.user.type;
-  }
-  next();
-});
-
-
 // Global Vars
 app.use(function (req, res, next) {
-  res.locals.success_msg = req.flash('success_msg');
-  res.locals.error_msg = req.flash('error_msg');
-  res.locals.error = req.flash('error');
+  res.locals.messages = require('express-messages')(req, res);
   next();
 });
 
@@ -93,8 +78,7 @@ app.use(function (req, res, next) {
 app.use('/', routes);
 app.use('/users', users);
 app.use('/classes', classes);
-app.use('/students', students);
-app.use('/instructors', instructors);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
