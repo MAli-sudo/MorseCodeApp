@@ -1,60 +1,61 @@
-<h2>Create An Account</h2>
-{{#if errors}}
+
+<div class="section animated-row" data-section="slide07">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
+                            {{#if errors}}
 			{{#each errors}}
 				<div class="notice error"><i class="icon-remove-sign icon-large"></i> {{msg}}
 				<a href="#close" class="icon-remove"></a></div>
 			{{/each}}
 		{{/if}}
-<form id="regForm" method="post" action="/users/register">
-	<div>
-		<label>Account Type</label>
-		<select name="type">
-			<option value="student">Student</option>
-			<option value="instructor">Instructor</option>
-		</select>
-	</div>
-	<br />
-	<div>
-		<label>First Name: </label>
-		<input type="text" name="first_name" value="{{first_name}}">
-	</div><br />
-	<div>
-		<label>Last Name: </label>
-		<input type="text" name="last_name" value="{{last_name}}">
-	</div><br />
-	<div>
-		<label>Street Address: </label>
-		<input type="text" name="street_address" value="{{street_address}}">
-	</div><br />
-	<div>
-		<label>City: </label>
-		<input type="text" name="city" value="{{city}}">
-	</div><br />
-	<div>
-		<label>State: </label>
-		<input type="text" name="state" value="{{state}}">
-	</div><br />
-	<div>
-		<label>Zip: </label>
-		<input type="text" name="zip" value="{{zip}}">
-	</div><br />
-	<div>
-		<label>Email Address: </label>
-		<input type="text" name="email" value="{{email}}">
-	</div><br />
-	<div>
-		<label>Username: </label>
-		<input type="text" name="username" value="{{username}}">
-	</div><br />
-	<div>
-		<label>Password: </label>
-		<input type="password" name="password" value="{{password}}">
-	</div><br />
-	<div>
-		<label>Password Confirm: </label>
-		<input type="password" name="password2" value="{{password2}}">
-	</div><br />
-	<div>
-		<input type="submit" value="Signup">
-	</div>
-</form>
+                                <h2>Create An Account</h2>
+                            </div>
+                                    <div class="col-md-14 animate" data-animate="fadeInUp">
+                                        <form id="regForm" method="post" action="/users/register">
+                                        <div>
+											<label>Account Type</label>
+											<select name="type">
+												<option value="student">Student</option>
+												<option value="instructor">Instructor</option>
+											</select>
+										</div>
+										<br />
+										<div class="input-field">
+                                                <input type="text" name="first_name" class="form-control"required placeholder="Firstname" >
+                                            </div>
+                                            <div class="input-field">
+                                                <input type="text" name="last_name" class="form-control" required placeholder="Lastname">
+                                            </div>
+                                            <div class="input-field">
+                                                <input type="text" name="street_address" class="form-control" required placeholder="street address">
+                                            </div>
+                                            <div class="input-field">
+                                                <input type="text" name="city" class="form-control" required placeholder="city">
+                                            </div>
+                                            <div class="input-field">
+                                                <input type="text" name="state" class="form-control" required placeholder="state">
+                                            </div>
+                                            <div class="input-field">
+                                                <input type="text" name="zip" class="form-control" required placeholder="zip">
+                                            </div>
+                                            <div class="input-field">
+                                                <input type="text" name="email" class="form-control" required placeholder="email">
+                                            </div>
+                                            <div class="input-field">
+                                                <input type="text" class="form-control" name="username" id="name" required placeholder="Username">
+                                            </div>
+                                            <div class="input-field">
+                                                <input type="password" name="password" class="form-control"required placeholder="password">
+                                            </div>
+                                            <div class="input-field">
+                                                <input type="password" name="password2" class="form-control" required placeholder="Confirm password">
+                                            </div>
+                                            <button class="btn" type="submit", value = "Signup">Register</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

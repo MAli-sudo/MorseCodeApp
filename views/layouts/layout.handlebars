@@ -1,22 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Elearn</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+    <title>Elegance - Learning</title>
 <link rel="stylesheet" type="text/css" href="/stylesheets/kickstart.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.css" media="all" />
 <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="all" />                 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="/javascripts/kickstart.js"></script>                       
+<script type="text/javascript" src="/javascripts/kickstart.js"></script>   
+<script type="text/javascript" src="/javascripts/bootstrap.js"></script>  
+ <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/font-awesome.css">
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/fullpage.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/owl.carousel.css">
+
+    <link rel="stylesheet" href="/stylesheets/animate.css">
+
+    <link rel="stylesheet" href="/stylesheets/templatemo-style.css">
+
+    <link rel="stylesheet" href="/stylesheets/responsive.css">                    
 </head>
 <body>
 
 <!-- Menu Horizontal -->
-<ul class="menu">
+<!-- <ul class="menu" >
 <li class="current"><a href="/">Home</a></li>
 <li><a href="/classes">Classes</a></li>
-</ul>
+</ul> -->
+    <div id="video">
+        <div class="preloader">
+            <div class="preloader-bounce">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
 
-<div class="grid">
-<div class="col_12">
+        <header id="header">
+            <div class="container-fluid">
+                <div class="navbar">
+                    <a href="#" id="logo" title="Elegance by TemplateMo">
+                        Elegance Learning
+                    </a>
+                    <div class="navigation-row">
+                        <nav id="navigation">
+                            <button type="button" class="navbar-toggle"> <i class="fa fa-bars"></i> </button>
+                            <div class="nav-box navbar-collapse">
+                                <ul class="navigation-menu nav navbar-nav navbars" id="nav">
+                                    <li class="current"><a href="/">Home</a></li>
+									<li><a href="/classes">Classes</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+<video autoplay muted loop id="myVideo">
+          <source src="images/video-bg.mp4" type="video/mp4">
+        </video>
+<!-- <div class="grid"> -->
+<!-- <div class="col_12">
 	<div class="col_9">
 		{{#if success_msg}}
 			<div class="notice success"><i class="icon-remove-sign icon-large"></i> {{success_msg}}
@@ -46,12 +99,55 @@
 	
 		{{>classes}}
 	
-</div>
+</div> -->
+ <div id="fullpage" class="fullpage-default">
 
+<div class="col_12">
+ 	<div class="col_9">
+		{{#if success_msg}}
+			<div class="notice success"><i class="icon-remove-sign icon-large"></i> {{success_msg}}
+				<a href="#close" class="icon-remove"></a>
+			</div>
+		{{/if}}
+
+		{{#if error_msg}}
+			<div class="notice error"><i class="icon-remove-sign icon-large"></i> {{error_msg}}
+				<a href="#close" class="icon-remove"></a>
+			</div>
+		{{/if}}
+		{{{body}}}
+	</div>
+	<div class="col_3">
+		{{>login}}
+	</div>
+	
+	<div class="section animated-row" data-section="slide02" >
+	
+		{{>classes}}
+	</div>
+
+ </div>
 </div><!-- END GRID -->
 
 <!-- ===================================== START FOOTER ===================================== -->
 <div class="clear"></div>
 
 
+ <script src="/javascripts/jquery.js"></script>
+
+    <script src="/javascripts/bootstrap.min.js"></script>
+
+    <script src="/javascripts/fullpage.min.js"></script>
+
+    <script src="/javascripts/scrolloverflow.js"></script>
+
+    <script src="/javascripts/owl.carousel.min.js"></script>
+
+    <script src="/javascripts/jquery.inview.min.js"></script>
+
+    <script src="/javascripts/form.js"></script>
+
+    <script src="/javascripts/custom.js"></script>
+</div>
 </body></html>
+

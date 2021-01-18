@@ -1,16 +1,50 @@
 {{#if user}}
-	<h5>Welcome Back {{user.username}}</h5>
-	<ul class="alt">
-	<li><a href="/{{type}}s/classes">My Classes</a></li>
-	<li><a href="/users/logout">Logout</a></li>
-	</ul>
+				<div class="section animated-row" data-section="slide07">
+                	<div class="section-inner">
+                    	<div class="row justify-content-center">
+                        	<div class="col-md-12 wide-col-laptop">
+                            	<div class="title-block animate" data-animate="fadeInUp">
+									<h5>Welcome Back {{user.username}}</h5>
+									<ul class="alt">
+										<li><a href="/{{type}}s/classes"><button class="btn">My classes</button></a></li>
+										<li><a href="/users/logout"><button class="btn">Logout</button>
+</a></li>
+									</ul>
+  									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>	
 {{else}}
-<h4>Student & Instructor Login</h4>
-	<form method="post" action="/users/login">
-		<label> Username: </label>
-		<input type="text" name="username">
-		<label> Password: </label>
-		<input type="password" name="password">
-		<input type="submit" class="button" value="Login">
-	</form>
+
+<div class="section animated-row" data-section="slide07">
+                <div class="section-inner " >
+                <div class = "p-3">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 wide-col-laptop" >
+                            <div class="title-block animate" data-animate="fadeInUp">
+                            
+                                <h1>User Login</h1>
+                            </div>
+                                    <div class="col-md-14 animate" data-animate="fadeInUp">
+                                        <form method="post" action="/users/login">
+                                            <div class="input-field">
+                                                <input type="text" class="form-control" name="username" id="name" required placeholder="Username">
+                                            </div>
+                                            <div class="input-field">
+                                                <input type="password" class="form-control" name="password" id="password" required placeholder="Password">
+                                            </div>
+                                            <button class="btn" type="submit">Login</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 {{/if}}
+
+
+
+
+                   

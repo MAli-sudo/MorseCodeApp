@@ -1,11 +1,31 @@
-<h2>Classes</h2>
+<div class="section animated-row" data-section="slide03">
+<div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 wide-col-laptop">
 {{#each classes}}
-	<div class="block">
-		<h3>{{title}}</h3>
-		<p>
-			{{description}}
-		</p>
-		<p>Instructor: <strong>{{instructor}}</strong></p>
-		<a class="button" href="/classes/{{_id}}/details">Class Details</a>
-	</div>
+
+                
+                            <div class="title-block animate" data-animate="fadeInUp">
+                                <h2>Classes</h2>
+                            </div>
+                            <div class="services-section">
+                                <div class="services-list owl-carousel">
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="service-box">
+                                            <span class="service-icon"><i class="fa fa-bookmark" aria-hidden="true"></i></span>
+                                            <h6>{{title}}</h6>
+                                            <p>{{description}} </p>
+                                            <p>Instructor: <strong>{{instructor}}</strong></p>
+                                            <a class="button" href="/classes/{{_id}}/details">Class Details</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                       
+            
 {{/each}}
+</div>
+ </div>
+                    </div>
+                </div>
