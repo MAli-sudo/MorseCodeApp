@@ -1,7 +1,5 @@
-# E-Learning
 
 
-# Register and login accounts for both students and instructors.Different classes in which student can enroll and then can access the course material and the instructor can create new course material. 
 # Technologies Used in Project:
 # Front-end Development:
 # HTML, CSS, Java Script, Bootstrap
